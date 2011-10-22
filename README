@@ -1,0 +1,13 @@
+Simple HTTP 1.1 Web Server implementation as a college "Network architecture" assigment.
+
+Server is realized as single thread process: accept request, handle request, send response.
+
+A client connect with the separate thread. A server side keeps all threads in thread pool.
+
+All incoming request are accepting with the 8888 port. To shutdown the server is dedicated 9999 port.
+Shutdown server method is realized as separate thread which always waits for the request.
+
+The first server version implements GET and HEAD commands and have nice extension capabilities, 
+having the easy understandable architecture.
+
+All events from/to server are logging to the file.
